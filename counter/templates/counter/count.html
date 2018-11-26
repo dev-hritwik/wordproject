@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<h1> There are {{ count }} words in your text</h1>
+
+{{ fulltext }}
+
+<br />
+
+<a href="{% url 'homepage' %}"> New Paragraph? </a>
+
+<br />
+
+{% for word, counteach in dictionary %}
+{{ word }}
+<br />
+{{counteach}}
+<br />
+
+{% endfor %}
+
+</html>
