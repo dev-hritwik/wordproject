@@ -10,7 +10,7 @@ def count(request):
     dictionary = {}
     for w in words:
         if w in dictionary:
-            dictionary[w] += 1
+            dictionary[w] = dictionary[w] + 1
         else:
             dictionary[w] = 1
     return render(request,'counter/count.html',{'fulltext':fulltext , 'count':len(words),'dictionary':dictionary.items()})
